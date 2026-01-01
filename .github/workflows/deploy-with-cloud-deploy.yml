@@ -12,7 +12,7 @@ env:
   REGION: asia-south2
   REGISTRY: asia-south2-docker.pkg.dev
   REPOSITORY: test-e-portal-images
-  PIPELINE_NAME: test-e-portal-pipeline
+  PIPELINE_NAME: graphql-api-service-pipeline
 
 jobs:
   build-and-release:
