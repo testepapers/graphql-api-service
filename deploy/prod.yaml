@@ -1,11 +1,11 @@
 apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
-  name: test-e-portal-api-service-prod
+  name: graphql-api-service-prod
   labels:
     environment: prod
   annotations:
-    run.googleapis.com/cloudsql-instances: test-e-portal-api-service:asia-south2:test-e-portal-db-prod
+    run.googleapis.com/cloudsql-instances: testepapers:asia-south2:test-e-papers-prod-db
 
 spec:
   template:
@@ -13,11 +13,11 @@ spec:
       annotations:
         autoscaling.knative.dev/maxScale: '1'  # Adjust as needed
         autoscaling.knative.dev/minScale: '0'  # Keep at least 1 for prod
-        run.googleapis.com/cloudsql-instances: test-e-portal-api-service:asia-south2:test-e-portal-db-prod
+        run.googleapis.com/cloudsql-instances: testepapers:asia-south2:test-e-papers-prod-db
     spec:
       containerConcurrency: 80
       containers:
-        - image: asia-south2-docker.pkg.dev/test-e-portal-api-service/test-e-portal-images/test-e-portal-api-service:TAG_PLACEHOLDER
+        - image: asia-south2-docker.pkg.dev/testepapers/test-e-portal-images/testepapers:TAG_PLACEHOLDER
           ports:
             - name: http1
               containerPort: 8080

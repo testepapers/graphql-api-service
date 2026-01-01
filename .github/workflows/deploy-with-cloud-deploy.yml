@@ -7,8 +7,8 @@ on:
   workflow_dispatch:
 
 env:
-  PROJECT_ID: test-e-portal-api-service
-  SERVICE_NAME: test-e-portal-api-service
+  PROJECT_ID: testepapers
+  SERVICE_NAME: graphql-api-service
   REGION: asia-south2
   REGISTRY: asia-south2-docker.pkg.dev
   REPOSITORY: test-e-portal-images

@@ -1,17 +1,17 @@
 apiVersion: deploy.cloud.google.com/v1
 kind: DeliveryPipeline
 metadata:
-  name: test-e-portal-pipeline
-description: Deployment pipeline for Test E-Portal API
+  name: graphql-api-service-pipeline
+description: Deployment pipeline for GraphQl Api service for Test E-Papers
 serialPipeline:
   stages:
     - targetId: test
-      profiles: [test]  # ⭐ Changed to test
+      profiles: [test]
       strategy:
         standard:
           verify: false
     - targetId: prod
-      profiles: [prod]  # ⭐ Changed to prod
+      profiles: [prod]
       strategy:
         standard:
           verify: false
@@ -22,7 +22,7 @@ metadata:
   name: test
 description: Test environment
 run:
-  location: projects/test-e-portal-api-service/locations/asia-south2
+  location: projects/testepapers/locations/asia-south2
 ---
 apiVersion: deploy.cloud.google.com/v1
 kind: Target
@@ -31,4 +31,4 @@ metadata:
 description: Production environment
 requireApproval: true  # ⭐ Manual approval required
 run:
-  location: projects/test-e-portal-api-service/locations/asia-south2
+  location: projects/testepapers/locations/asia-south2
