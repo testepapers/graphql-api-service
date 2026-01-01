@@ -4,9 +4,6 @@ metadata:
   name: graphql-api-service-prod
   labels:
     environment: prod
-  annotations:
-    run.googleapis.com/cloudsql-instances: testepapers:asia-south2:test-e-papers-prod-db
-
 spec:
   template:
     metadata:

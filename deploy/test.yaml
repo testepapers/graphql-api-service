@@ -4,9 +4,6 @@ metadata:
   name: graphql-api-service-test
   labels:
     environment: test
-  annotations:
-    run.googleapis.com/cloudsql-instances: testepapers:asia-south2:test-e-papers-test-db
-
 spec:
   template:
     metadata:
