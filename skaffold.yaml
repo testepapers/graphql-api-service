@@ -1,0 +1,19 @@
+apiVersion: skaffold/v4beta6
+kind: Config
+metadata:
+  name: graphql-api-service
+
+profiles:
+  - name: test
+    deploy:
+      cloudrun: {}
+    manifests:
+      rawYaml:
+        - deploy/test.yaml
+
+  - name: prod
+    deploy:
+      cloudrun: {}
+    manifests:
+      rawYaml:
+        - deploy/prod.yaml
