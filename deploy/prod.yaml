@@ -14,7 +14,7 @@ spec:
     spec:
       containerConcurrency: 80
       containers:
-        - image: asia-south2-docker.pkg.dev/testepapers/test-e-portal-images/testepapers:TAG_PLACEHOLDER
+        - image: asia-south2-docker.pkg.dev/testepapers/test-e-portal-images/graphql-api-service:TAG_PLACEHOLDER
           ports:
             - name: http1
               containerPort: 8080
