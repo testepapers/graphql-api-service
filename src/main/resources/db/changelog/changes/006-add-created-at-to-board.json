@@ -12,7 +12,7 @@
                 {
                   "column": {
                     "name": "created_at",
-                    "type": "TIMESTAMPZ",
+                    "type": "TIMESTAMP",
                     "defaultValueComputed": "NOW()",
                     "constraints": {
                       "nullable": false
