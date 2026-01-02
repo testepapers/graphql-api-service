@@ -4,6 +4,8 @@
     { "include": { "file": "db/changelog/changes/002-create-tenant-and-region.json" } },
     { "include": { "file": "db/changelog/changes/003-create-questions-table.json" } },
     { "include": { "file": "db/changelog/changes/004-create-question-indexes.json" } },
-    { "include": { "file": "db/changelog/changes/005-create-question-triggers.json" } }
+    { "include": { "file": "db/changelog/changes/005-create-question-triggers.json" } },
+    { "include": { "file": "db/changelog/changes/006-add-created-at-to-board.json" } }
+
   ]
 }

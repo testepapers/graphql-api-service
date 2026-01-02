@@ -1,0 +1,29 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "006-add-created-at-to-board",
+        "author": "migration",
+        "changes": [
+          {
+            "addColumn": {
+              "tableName": "board",
+              "columns": [
+                {
+                  "column": {
+                    "name": "created_at",
+                    "type": "TIMESTAMPZ",
+                    "defaultValueComputed": "NOW()",
+                    "constraints": {
+                      "nullable": false
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
